@@ -38,6 +38,11 @@ import wedo2ConnectionTipIconURL from './wedo2/wedo-button-illustration.svg';
 import boostIconURL from './boost/boost.png';
 import boostInsetIconURL from './boost/boost-small.svg';
 
+import edubotIconURL from './edubot/edubot.png';
+import edubotInsetIconURL from './edubot/edubot-small.svg';
+import edubotConnectionIconURL from './edubot/edubot-illustration.svg';
+import edubotConnectionSmallIconURL from './edubot/edubot-small.svg';
+
 export default [
     {
         name: (
@@ -266,5 +271,35 @@ export default [
         disabled: true,
         bluetoothRequired: true,
         internetConnectionRequired: true
+    },
+    {
+        name: 'OROCA Edubot',
+        extensionId: 'edubot',
+        collaborator: 'OROCA',
+        iconURL: edubotIconURL,
+        insetIconURL: edubotInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Play with powerful small robot!"
+                description="Description for the 'OROCA_Edubot' extension"
+                id="gui.extension.edubot.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: true,
+        internetConnectionRequired: true,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: false,
+        connectionIconURL: edubotConnectionIconURL,
+        connectionSmallIconURL: edubotConnectionSmallIconURL,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting"
+                description="Message to help people connect to their edubot."
+                id="gui.extension.edubot.connectingMessage"
+            />
+        ),
+        helpLink: 'https://github.com/oroca/OROCA-EduBot'
     }
 ];
